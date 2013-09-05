@@ -47,3 +47,16 @@ Tags: white
 }
 .bypostauthor {
 }
+
+  p {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .articles li article h2 {
+    font-size:2.4em;
+  }
+
+  .articles li article h2 a {
+    font-weight:bold;
+  }
