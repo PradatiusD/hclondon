@@ -1,0 +1,49 @@
+/*
+Theme Name: Play
+Theme URI: http://themeforest.net/user/Equiet/portfolio
+Author: Equiet
+Author URI: http://equiet.sk/
+Description: Responsive Portfolio for WordPress
+Version: 1.3
+License: GNU General Public License & Envato License
+License URI: http://wordpress.org/about/gpl/, http://themeforest.net/licenses/
+Tags: white
+*/
+
+
+/* WordPress */
+.alignnone, .aligncenter, .alignleft, .alignright {
+  text-align: center;
+  font-style: italic;
+}
+  .alignnone img, .aligncenter img, .alignleft img, .alignright img {
+    margin-bottom: 10px;
+  }
+  .alignnone {
+    margin: 0;
+  }
+  .aligncenter {
+    margin: 5px auto 20px auto;
+  }
+  .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+  }
+  .alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+  }
+  .wp-caption {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+    .wp-caption-text {
+      font-size: 11px;
+    }
+.sticky {
+}
+.gallery-caption {
+}
+.bypostauthor {
+}
