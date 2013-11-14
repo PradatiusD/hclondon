@@ -1,0 +1,81 @@
+@import "bourbon/bourbon";
+.post-type-archive.post-type-archive-stylists {
+	h2 {
+		display: none;
+	}
+	.meta {
+		display: none;
+	}
+
+	.layout.full {
+		padding:0;
+	}
+
+	section.staff-member {
+		position:relative;
+		float: left;
+		width: 100%;
+		overflow: hidden;
+		height: 192px;
+		.info {
+			position: absolute;
+			z-index: 1000;
+			background: rgba(0, 0, 0, 0.86);
+			height: 100%;
+			width: 100%;
+			top: 0;
+			padding:1em 10%;
+			color: #FFF;
+			opacity: 0;
+			@include transition (opacity 0.5s ease-out 0s);
+			&.clicked {
+				opacity: 1;
+				@include transition (opacity 0.5s ease-out 0s);
+			}
+
+			h1 {
+				font-family: "Open Sans Condensed", sans-serif;
+				font-weight: 700;
+				color:white;
+				margin: 0;
+				margin: 1em auto 0.5em auto;
+				text-align: center;
+				font-size: 1.8em;
+				padding-bottom: 0.5em;
+				border-bottom: 1px solid #FFF;
+				line-height: 1;
+				width: 80%;
+				a {
+					color: #FFF;
+					text-transform: uppercase;
+				}
+			}
+			p {
+				font-size: 13px;
+				line-height: 1;
+			}
+		}
+		.HCL-img-pro {
+			position: absolute;
+			top: 0;
+			left: 0;
+			&:hover {
+				opacity: 0;
+			}
+		}
+		.HCL-img-fun {
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include transition (opacity 0.5s ease-out 0s);
+			opacity: 0;
+			width: 100%;
+		}
+		&:hover {
+			.HCL-img-fun {
+				@include transition (opacity 0.5s ease-out 0s);
+				opacity: 1;
+			}
+		}
+	}
+}

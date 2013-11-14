@@ -1,0 +1,23 @@
+<section class="staff-member">
+	<div class="info">
+		<h1><a href="[wpv-post-url]">[wpv-post-title]</a></h1>
+		<p><strong>Tier: </strong>[types field="tier"][/types]</p>
+		<p><strong>Years as a stylist: </strong>[types field="years-as-stylist" format="FIELD_VALUE"][/types]</p>
+		<p><strong>Years with Helen: </strong>[types field="years-with-helen"][/types]</p>
+		<p><strong>Specialties: </strong><em>[types field="specialties"][/types]</em></p>
+		<p><strong>Hobbies: </strong>[types field="hobbies"][/types]</p>
+	</div>
+	[types field="professional-image" class="HCL-img-pro" size="full" align="none"][/types]
+	[types field="fun-image" class="HCL-img-fun" size="full" align="none"][/types]
+</section>
+
+<script>
+	(function($){
+		$('body').on('click','.staff-member', function(){
+			var infoDiv = $(this).find('.info');
+
+			infoDiv.toggleClass('clicked');
+		})
+
+	})(jQuery)
+</script>
