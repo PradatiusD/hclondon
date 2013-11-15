@@ -1,22 +1,31 @@
 <section class="staff-member">
+	[types field="professional-image" class="HCL-img-pro" size="full" align="none"][/types]
+	[types field="fun-image" class="HCL-img-fun" size="full" align="none"][/types]
 	<div class="info">
-		<h1><a href="[wpv-post-url]">[wpv-post-title]</a></h1>
-		<p><strong>Tier: </strong>[types field="tier"][/types]</p>
-		<p><strong>Years as a stylist: </strong>[types field="years-as-stylist" format="FIELD_VALUE"][/types]</p>
-		<p><strong>Years with Helen: </strong>[types field="years-with-helen"][/types]</p>
+		<div class="nameTitle">
+			<h1><a href="[wpv-post-url]">[wpv-post-title]</a></h1>
+			<h2>[types field="tier"][/types]</h2>
+		</div>
+		<p><strong>Experience: </strong>[types field="years-as-stylist" format="FIELD_VALUE"][/types] yrs ([types field="years-with-helen"][/types] w/ Helen)</p>
 		<p><strong>Specialties: </strong><em>[types field="specialties"][/types]</em></p>
 		<p><strong>Hobbies: </strong>[types field="hobbies"][/types]</p>
 	</div>
-	[types field="professional-image" class="HCL-img-pro" size="full" align="none"][/types]
-	[types field="fun-image" class="HCL-img-fun" size="full" align="none"][/types]
 </section>
+
+<!-- Minified to remove p tags -->
+<section class="staff-member">[types field="professional-image" class="HCL-img-pro" size="full" align="none"][/types][types field="fun-image" class="HCL-img-fun" size="full" align="none"][/types]<div class="info"><div class="nameTitle"><h1><a href="[wpv-post-url]">[wpv-post-title]</a></h1><h2>[types field="tier"][/types]</h2></div><p><strong>Experience: </strong>[types field="years-as-stylist" format="FIELD_VALUE"][/types] yrs ([types field="years-with-helen"][/types] w/ Helen)</p><p><strong>Specialties: </strong><em>[types field="specialties"][/types]</em></p><p><strong>Hobbies: </strong>[types field="hobbies"][/types]</p></div></section>
+
 
 <script>
 	(function($){
 		$('body').on('click','.staff-member', function(){
 			var infoDiv = $(this).find('.info');
 
+			// animation classes
 			infoDiv.toggleClass('clicked');
+			infoDiv.find('.nameTitle').toggleClass('animated fadeInDown');
+			infoDiv.find('p').toggleClass('animated fadeInUp');
+
 		})
 
 	})(jQuery)
